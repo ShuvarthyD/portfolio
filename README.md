@@ -25,7 +25,7 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
   <img src="http://some_place.com/image.png" />
 </p>
 <p style="text-align: center;">Text_content</p>
-2. Excluding the 10 genetic markers, found which variables are highly correlated and only included one of them in the linear model as predictors with high correlation can lead to collinearity issues.
+2. Excluding the 10 genetic markers, I found which variables are highly correlated and only included one of them in the linear model as predictors with high correlation can lead to collinearity issues.
 <p align="center">
   <img src="http://some_place.com/image.png" />
 </p>
@@ -35,7 +35,7 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
   <img src="http://some_place.com/image.png" />
 </p>
 <p style="text-align: center;">Text_content</p>
-4. A partial F-test was used to test the joint effect of the 10 genes at α = 0.05. Our null hypothesis is all the beta values for the 10 genes = 0. Utilizing  the <b>anova</b> function, both the original model and a reduced model excluding the genetic markers were employed to derive a p-value of <b>0.0455</b> < α = 0.05. Thus the null hypothesis was rejected and we conclude that there is a joint effect of the 10 genes on SBP.
+4. A partial F-test was used to test the joint effect of the 10 genes at α = 0.05. Our null hypothesis is all the beta values for the 10 genes = 0. Utilizing  the <b>anova</b> function, both the original model and a reduced model excluding the genetic markers were employed to derive a p-value of <b>0.0455</b> < α = 0.05. Thus the null hypothesis was rejected and I conclude that there is a joint effect of the 10 genes on SBP.
 <p align="center">
   <img src="http://some_place.com/image.png" />
 </p>
@@ -51,5 +51,27 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 <p style="text-align: center;">Text_content</p>
 
 ### Wavelength Calibration | Python
-This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset. For the first part, we are given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package
-
+This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset. For the first part, I am given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula $X_{cent} = \frac{\sum x_i I_i}{\sum I_i}\$. Then by creating a simple linear fit using the <b>polyfit</b> function, I was able to obtain the wavelength solution.
+<div style="display: flex; justify-content: center;">
+  <div style="margin: 0 10px;">
+    <img src="http://some_place.com/image1.png" />
+  </div>
+  <div style="margin: 0 10px;">
+    <img src="http://some_place.com/image2.png" />
+  </div>
+</div>
+<p style="text-align: center;">Text_content</p>
+For the second part, I was able to obtain both the peak wavelengths and their pixel positions manually. But a linear fit was not sufficient enough so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram . Thus the polynomial with degree 3 was chosen as the best fit.
+<p align="center">
+  <img src="http://some_place.com/image.png" />
+</p>
+<p style="text-align: center;">Text_content</p>
+<div style="display: flex; justify-content: center;">
+  <div style="margin: 0 10px;">
+    <img src="http://some_place.com/image1.png" />
+  </div>
+  <div style="margin: 0 10px;">
+    <img src="http://some_place.com/image2.png" />
+  </div>
+</div>
+I obtain the following wavelength solution: λ = −(0.065 ± 0.038)x2 + (12.287 ± 4.762)x + (15530.984 ± 189.504).
