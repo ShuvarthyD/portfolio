@@ -8,7 +8,7 @@
     <div style="float: right;">June 2024 (expected)</div>
 </div>
 <p>University of Toronto Scarborough<br>
-* Relevant Coursework: Data Analysis, Regression Analysis, Time Series Analysis, Data Visualization, Web Development</p>
+<b>Relevant Coursework:</b> Data Analysis, Regression Analysis, Time Series Analysis, Data Visualization, Web Development</p>
 
 ## Projects
 ### Course Website | Python, SQL, HTML, CSS
