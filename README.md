@@ -1,6 +1,6 @@
 ## Technical Skills
-Programming: Python, R, SQL
-Platforms & Tools: VS Code, Jupyter Notebook, R Tidyverse, Python Pandas, Git
+<b>Programming:</b> Python, R, SQL <br>
+<b>Platforms & Tools:</b> VS Code, Jupyter Notebook, R Tidyverse, Python Pandas, Git
 
 ## Education 
 <div style="overflow: hidden;">
@@ -12,7 +12,7 @@ Platforms & Tools: VS Code, Jupyter Notebook, R Tidyverse, Python Pandas, Git
 
 ## Projects
 ### Course Website | Python, SQL, HTML, CSS
-Github: [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Cloud Version: [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
+<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud Version:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
 <br>
 A responsive Web Development course website created using the [Flask](https://flask.palletsprojects.com/en/3.0.x/) web framework, along with the extension [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) to edit and manage the database. Users initially only have access to basic course information, but can choose to **login** or **register** as a **student** or **instructor** to access additional features. Instructors can access their account page to view feedback, edit student marks, and access visualizations and analyses of student mark data (see Figure 1) student mark data. Students can submit remark requests, send feedback, and view their grade summary. Although SQLAlchemy has its own "Pythonic" way of handling databases (ORM), I prefer using raw SQL queries as it is much easier to read and maintain.
 
@@ -61,7 +61,7 @@ This project is divided into two parts, both aimed at obtaining a wavelength sol
   </div>
 </div>
 <p style="text-align: center;">Text_content</p>
-For the second part, I was able to obtain both the peak wavelengths and their pixel positions manually. But a linear fit was not sufficient enough so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram . Thus the polynomial with degree 3 was chosen as the best fit.
+For the second part, I was able to obtain both the peak wavelengths and their pixel positions manually. But a linear fit was not sufficient enough so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram. Thus the polynomial with degree 3 was chosen as the best fit.
 <p align="center">
   <img src="http://some_place.com/image.png" />
 </p>
@@ -74,4 +74,4 @@ For the second part, I was able to obtain both the peak wavelengths and their pi
     <img src="http://some_place.com/image2.png" />
   </div>
 </div>
-I obtain the following wavelength solution: λ = −(0.065 ± 0.038)x2 + (12.287 ± 4.762)x + (15530.984 ± 189.504).
+I obtain the following wavelength solution: $\lambda = −(0.065 ± 0.038)x2 + (12.287 ± 4.762)x + (15530.984 ± 189.504)$.
