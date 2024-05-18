@@ -44,6 +44,7 @@ A responsive Web Development course website created using the [Flask](https://fl
   </div>
 </div>
 <p style="text-align: center;"><em>Students can view their grades compared to the class averages</em></p>
+
 ### Linear Regression Analysis of Systolic Blood Pressure | R
 In this project, I analyzed the effects of 10 genetic markers alongside 17 clinical covariates on systolic blood pressure (SBP) and developed a prediction model for SBP. The steps taken were as follows:
 <p align="center">
@@ -83,35 +84,6 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
       </p>
   </li>
 </ol>
-1. Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter.
-<p align="center">
-  <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
-2. Excluding the 10 genetic markers, I found which variables are highly correlated and only included one of them in the linear model as predictors with high correlation can lead to collinearity issues.
-<p align="center">
-  <img src="{{ "/img/SBP2.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
-3. Created the linear model in R and interpreted some of the regression parameters:
-<p align="center">
-  <img src="{{ "/img/SBP3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
-4. A partial F-test was used to test the joint effect of the 10 genes at α = 0.05. Our null hypothesis is all the beta values for the 10 genes = 0. Utilizing  the <b>anova</b> function, both the original model and a reduced model excluding the genetic markers were employed to derive a p-value of <b>0.0455</b> < α = 0.05. Thus the null hypothesis was rejected and I conclude that there is a joint effect of the 10 genes on SBP.
-<p align="center">
-  <img src="{{ "/img/SBP4.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
-5. To obtain a prediction model, both forward selection and backward elimination strategies were utilized. The <b>MASS</b> package in R contains the <b>stepAIC</b> function to implement these strategies. Although a 5-fold cross-validation could have been conducted to calculate the mean squared prediction error (MSPE) for each model, it was deemed unnecessary as the results for both strategies led to the same model.
-<p align="center">
-  <img src="{{ "/img/SBP5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
-<p align="center">
-  <img src="{{ "/img/SBP6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
-<p style="text-align: center;">Text_content</p>
 
 ### Wavelength Calibration | Python
 This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset. For the first part, I am given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula $X_{cent} = \frac{\sum x_i I_i}{\sum I_i}\$. Then by creating a simple linear fit using the <b>polyfit</b> function, I was able to obtain the wavelength solution.
