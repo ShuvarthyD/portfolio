@@ -12,13 +12,17 @@
 
 ## Projects
 ### Course Website | Python, SQL, HTML, CSS
-<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud Version:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
+<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud Version:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
 <br>
-A responsive Web Development course website created using the [Flask](https://flask.palletsprojects.com/en/3.0.x/) web framework, along with the extension [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) to edit and manage the database. Users initially only have access to basic course information, but can choose to **login** or **register** as a **student** or **instructor** to access additional features. Instructors can access their account page to view feedback, edit student marks, and access visualizations and analyses of student mark data (see Figure 1) student mark data. Students can submit remark requests, send feedback, and view their grade summary. Although SQLAlchemy has its own "Pythonic" way of handling databases (ORM), I prefer using raw SQL queries as it is much easier to read and maintain.
+A responsive Web Development course website created using the [Flask](https://flask.palletsprojects.com/en/3.0.x/) web framework, along with the extension [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) to edit and manage the database. Users initially only have access to basic course information, but can choose to **login** or **register** as a **student** or **instructor** to access additional features. 
+<ul>
+  <li>Instructors can access their account page to view feedback, edit student marks, and access visualizations and analyses of student mark data.</li>
+  <li> Students can submit remark requests, send feedback, and view their grade summary.</li>
+</ul>
 <p align="center">
   <img src="{{ "/img/CW6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
 </p>
-<p style="text-align: center;">Text_content</p>
+<p style="text-align: center;">Although SQLAlchemy has its own "Pythonic" way of handling databases (ORM), I prefer using raw SQL queries as it is much easier to read and maintain</p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/CW1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
