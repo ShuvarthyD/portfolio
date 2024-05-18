@@ -19,9 +19,11 @@ A responsive Web Development course website created using the [Flask](https://fl
   <li>Instructors can access their account page to view feedback, edit student marks, and access visualizations and analyses of student mark data.</li>
   <li>Students can submit remark requests, send feedback, and view their grade summary.</li>
 </ul>
-<p align="center">
-  <img src="{{ "/img/CW6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-</p>
+<div style="display: flex; justify-content: center;">
+  <div style="margin: 0 10px;">
+    <img src="{{ "/img/CW6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+  </div>
+</div>
 <p style="text-align: center;"><em>Used raw SQL queries instead of SQLAlchemy's "Pythonic" way of handling databases (ORM)</em></p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
@@ -82,29 +84,33 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
       <p align="center">
           <img src="{{ "/img/SBP6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
       </p>
+      <p style="text-align: center;"><em>The obtained prediction model</em></p>
   </li>
 </ol>
 
 ### Wavelength Calibration | Python
-This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset. For the first part, I am given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula $X_{cent} = \frac{\sum x_i I_i}{\sum I_i}\$. Then by creating a simple linear fit using the <b>polyfit</b> function, I was able to obtain the wavelength solution.
+This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset.
+#### Part 1
+<p>Given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula https://latex.codecogs.com/svg.image?&space;X_{cent}=\frac{\sum&space;x_{i}I_{i}}{\sum&space;I_{i}}. Then a simple linear fit was made using the <b>polyfit</b> function to obtain the wavelength solution.</p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
 </div>
-<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
+<p style="text-align: center;"><em>Major identified peaks over the intensity value of 300 with the acceptable error range</em></p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC2.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
 </div>
-<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
+<p style="text-align: center;"><em>linear fit of the wavelengths and centroids</em></p>
 <p>Part 1 wavelength solution: <img src="https://latex.codecogs.com/svg.image?\lambda=(0.236\pm&space;0.000)x&plus;(527.843\pm&space;0.297)" style="vertical-align: middle;"/> </p>
-For the second part, I manually obtained the peak wavelengths and their pixel positions. However a linear fit was insufficient, so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram. Thus the polynomial with degree 3 was chosen as the best fit.
+#### Part 2
+Manually obtained both the peak wavelengths and their pixel positions. However a linear fit was insufficient, so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram. Thus the polynomial with degree 3 was chosen as the best fit.
 <p align="center">
   <img src="{{ "/img/WC3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
 </p>
-<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
+<p style="text-align: center;"><em>Three degrees of polynomial fit along with its coefficients</em></p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC4.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
@@ -113,6 +119,6 @@ For the second part, I manually obtained the peak wavelengths and their pixel po
     <img src="{{ "/img/WC5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
 </div>
-<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
+<p style="text-align: center;"><em>The residual plot and distributions of different polynomial fits</em></p>
 <p>Part 2 wavelength solution: <img src="https://latex.codecogs.com/svg.image?\lambda=-(0.065\pm&space;0.038)x^{2}&plus;(12.287\pm&space;4.762)x&plus;(15530.984\pm&space;189.504)" /></p>
 
