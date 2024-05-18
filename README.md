@@ -91,17 +91,20 @@ This project is divided into two parts, both aimed at obtaining a wavelength sol
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
+</div>
+<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
+<div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC2.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
 </div>
-<p style="text-align: center;">Text_content</p>
+<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
 <p>Part 1 wavelength solution: <img src="https://latex.codecogs.com/svg.image?\lambda=(0.236\pm&space;0.000)x&plus;(527.843\pm&space;0.297)" style="vertical-align: middle;"/> </p>
 For the second part, I manually obtained the peak wavelengths and their pixel positions. However a linear fit was insufficient, so I used a residual plot to compare the accuracy of the different degrees of fit. From the residual plots shown below, we can see that the residuals for all 3 fits are random implying they are all suitable fits. But we also notice that the residuals for the cubic fit seem to be closer to having a fitting error of 0 on average, which can be further noticed in the histogram. Thus the polynomial with degree 3 was chosen as the best fit.
 <p align="center">
   <img src="{{ "/img/WC3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
 </p>
-<p style="text-align: center;">Text_content</p>
+<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC4.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
@@ -110,5 +113,6 @@ For the second part, I manually obtained the peak wavelengths and their pixel po
     <img src="{{ "/img/WC5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
   </div>
 </div>
+<p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
 <p>Part 2 wavelength solution: <img src="https://latex.codecogs.com/svg.image?\lambda=-(0.065\pm&space;0.038)x^{2}&plus;(12.287\pm&space;4.762)x&plus;(15530.984\pm&space;189.504)" /></p>
 
