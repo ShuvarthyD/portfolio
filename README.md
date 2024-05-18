@@ -12,7 +12,7 @@
 
 ## Projects
 ### Course Website | Python, SQL, HTML, CSS
-<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud Version:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
+<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
 <br>
 A responsive Web Development course website created using the [Flask](https://flask.palletsprojects.com/en/3.0.x/) web framework, along with the extension [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) to edit and manage the database. Users initially only have access to basic course information, but can choose to **login** or **register** as a **student** or **instructor** to access additional features. 
 <ul>
@@ -91,7 +91,7 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 ### Wavelength Calibration | Python
 This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset.
 #### Part 1
-<p>Given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula https://latex.codecogs.com/svg.image?&space;X_{cent}=\frac{\sum&space;x_{i}I_{i}}{\sum&space;I_{i}}. Then a simple linear fit was made using the <b>polyfit</b> function to obtain the wavelength solution.</p>
+<p>Given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula <img src="https://latex.codecogs.com/svg.image?&space;X_{cent}=\frac{\sum&space;x_{i}I_{i}}{\sum&space;I_{i}}"/>. Then a simple linear fit was made using the <b>polyfit</b> function to obtain the wavelength solution.</p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
