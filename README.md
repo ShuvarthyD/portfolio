@@ -53,38 +53,49 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 </p>
 <ol>
   <li>Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter.
-      <p align="center">
-          <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>Dummy coding scheme for 2 of the clinical covariates</em></p>
   </li>
   <li>Excluding the 10 genetic markers, I found which variables are highly correlated and only included one of them in the linear model as predictors with high correlation can lead to collinearity issues.
-      <p align="center">
-          <img src="{{ "/img/SBP2.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP2.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>High correlation between the "BMI" and "overweight" variables</em></p>
   </li>
   <li>Created the linear model in R and interpreted some of the regression parameters:
-      <p align="center">
-          <img src="{{ "/img/SBP3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>...</em></p>
   </li>
   <li>A partial F-test was used to test the joint effect of the 10 genes at α = 0.05. This was achieved in R using the <b>anova</b> function using both the original model and a reduced model excluding the genetic markers as the parameters.
-      <p align="center">
-          <img src="{{ "/img/SBP4.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP4.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>Derived a p-value of <b>0.0455</b> < α = 0.05, so we reject the null hypothesis and conclude that there is a joint effect of the 10 genes on SBP.</em></p>
   </li>
   <li>To obtain a prediction model, both forward selection and backward elimination strategies were utilized. The <b>MASS</b> package in R contains the <b>stepAIC</b> function to implement these strategies. Although a 5-fold cross-validation could have been conducted to calculate the mean squared prediction error (MSPE) for each model, it was deemed unnecessary as the results for both strategies led to the same model.
-      <p align="center">
-          <br> 
-          <img src="{{ "/img/SBP5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>Both the forward and backward test in R</em></p>
-      <p align="center">
-          <img src="{{ "/img/SBP6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
-      </p>
+      <div style="display: flex; justify-content: center;">
+          <div style="margin: 0 10px;">
+            <img src="{{ "/img/SBP6.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+          </div>
+      </div>
       <p style="text-align: center;"><em>The obtained prediction model</em></p>
   </li>
 </ol>
