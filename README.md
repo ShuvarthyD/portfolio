@@ -52,7 +52,8 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 <p align="center">
 </p>
 <ol>
-  <li>Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter.
+  <li>Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter. 
+      &#8203; <br>
       <div style="display: flex; justify-content: center;">
           <div style="margin: 0 10px;">
             <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
@@ -103,7 +104,7 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 ### Wavelength Calibration | Python
 This project is divided into two parts, both aimed at obtaining a wavelength solution by finding an appropriate fit between the peak wavelengths and pixel positions of a given dataset.
 #### Part 1
-<p>Given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula <img src="https://latex.codecogs.com/svg.image?&space;X_{cent}=\frac{\sum&space;x_{i}I_{i}}{\sum&space;I_{i}}"/>. Then a simple linear fit was made using the <b>polyfit</b> function to obtain the wavelength solution.</p>
+<p>Given a Neon Lamp Spectrum where the peak wavelengths were obtained manually and the peak pixel positions were found using the <b>find_peaks</b> function from the <b>scipy</b> package. Since the given measurements may contain observational errors, I opted to use the weighted means of the peaks. To do this I picked an acceptable range of &pm;10 pixels of the identified peaks and plugged it into the <b>centroid</b> formula <img src="https://latex.codecogs.com/svg.image?&space;X_{cent}=(\sum&space;x_{i}I_{i})/(\sum&space;I_{i})"/>. Then a simple linear fit was made using the <b>polyfit</b> function to obtain the wavelength solution.</p>
 <div style="display: flex; justify-content: center;">
   <div style="margin: 0 10px;">
     <img src="{{ "/img/WC1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
