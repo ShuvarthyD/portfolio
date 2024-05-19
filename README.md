@@ -12,7 +12,7 @@
 
 ## Projects
 ### Course Website | Python, SQL, HTML, CSS
-<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
+<b>Github:</b> [Course Website](https://github.com/ShuvarthyD/Course_Website) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>Cloud:</b> [shuvarthyd.pythonanywhere.com](https://shuvarthyd.pythonanywhere.com/)
 <br>
 A responsive Web Development course website created using the [Flask](https://flask.palletsprojects.com/en/3.0.x/) web framework, along with the extension [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/) to edit and manage the database. Users initially only have access to basic course information, but can choose to **login** or **register** as a **student** or **instructor** to access additional features. 
 <ul>
@@ -53,9 +53,8 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
 </p>
 <ol>
   <li>Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter. 
-      &#8203; <br>
       <div style="display: flex; justify-content: center;">
-          <div style="margin: 0 10px;">
+          <div style="margin: 5 10px;">
             <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
           </div>
       </div>
@@ -75,7 +74,14 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
             <img src="{{ "/img/SBP3.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
           </div>
       </div>
-      <p style="text-align: center;"><em>...</em></p>
+      <p style="text-align: center;">
+          <em>
+              <ul>
+                  <li><b>Smoke: </b> The mean difference in SBP between an individual who smokes and an individual who doesn’t smoke with all other predictors the same is 10.13.</li>
+                  <li><b>Alcohol level 3: </b>The mean difference in SBP between an individual in a high alcohol usage group and an individual in a low alcohol usage group with all other predictors the same is 13.28</li>
+              </ul>
+         </em>
+      </p>
   </li>
   <li>A partial F-test was used to test the joint effect of the 10 genes at α = 0.05. This was achieved in R using the <b>anova</b> function using both the original model and a reduced model excluding the genetic markers as the parameters.
       <div style="display: flex; justify-content: center;">
@@ -85,7 +91,7 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
       </div>
       <p style="text-align: center;"><em>Derived a p-value of <b>0.0455</b> < α = 0.05, so we reject the null hypothesis and conclude that there is a joint effect of the 10 genes on SBP.</em></p>
   </li>
-  <li>To obtain a prediction model, both forward selection and backward elimination strategies were utilized. The <b>MASS</b> package in R contains the <b>stepAIC</b> function to implement these strategies. Although a 5-fold cross-validation could have been conducted to calculate the mean squared prediction error (MSPE) for each model, it was deemed unnecessary as the results for both strategies led to the same model.
+  <li>To obtain a prediction model, both forward selection and backward elimination strategies were utilized. The <b>MASS</b> package in R contains the <b>stepAIC</b> function to implement these strategies. Both strategies led to the same model.
       <div style="display: flex; justify-content: center;">
           <div style="margin: 0 10px;">
             <img src="{{ "/img/SBP5.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
