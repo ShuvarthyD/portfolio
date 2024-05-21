@@ -55,10 +55,10 @@ In this project, I analyzed the effects of 10 genetic markers alongside 17 clini
   <li>Implemented a dummy coding scheme for the categorical variables in the dataset. In R this can be achieved by using the <b>relvel</b> function and setting the reference level using the <b>ref</b> parameter. 
       <div style="display: flex; justify-content: center;">
           <div style="margin: 5 10px;">
-            <img src="{{ "/img/SBP1.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
+            <img src="{{ "/img/SBP1N.png" | prepend: site.baseurl | prepend: site.url}}" alt="Untitled" />
           </div>
       </div>
-      <p style="text-align: center;"><em>Dummy coding scheme for 2 of the clinical covariates</em></p>
+      <p style="text-align: center;"><em>Dummy coding scheme for a categorical variable</em></p>
   </li>
   <li>Excluding the 10 genetic markers, I found which variables are highly correlated and only included one of them in the linear model as predictors with high correlation can lead to collinearity issues.
       <div style="display: flex; justify-content: center;">
