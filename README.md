@@ -5,7 +5,7 @@
 ## Education 
 <div style="overflow: hidden;">
     <div style="float: left;"><em>HBSc, Major in Statistics</em></div>
-    <div style="float: right;">June 2024 (expected)</div>
+    <div style="float: right;">June 2024</div>
 </div>
 <p>University of Toronto Scarborough<br>
 <b>Relevant Coursework:</b> Data Analysis, Regression Analysis, Time Series Analysis, Data Visualization, Web Development</p>
